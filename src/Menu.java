@@ -15,7 +15,16 @@ public class Menu {
     public Date getLastUpdated() { return this.lastUpdated;}
     public void setLastUpdated(Date lastUpdated) {this.lastUpdated = lastUpdated;}
 
+ public void addMenuItems (MenuItems item) {
+        this.menuItems.add(item);
 
+        this.lastUpdated = new Date();
+ }
+ 
+ public void removeMenuItems (MenuItems item) {
+        this.menuItems.remove(item);
+        this.lastUpdated = new Date();
+ }
 
 
     

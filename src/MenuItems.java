@@ -47,5 +47,35 @@ public class MenuItems {
     public Boolean getIsNew() {return this.isNew;}
     public void setIsNew(Boolean isNew) {this.isNew = isNew;}
 
+    @Override
+    public String toString() {
+        String returnString = "";
 
+        returnString += "Item Name: " + this.name + "\n";
+        returnString += "Item Description: " + this.description + "\n";
+        returnString += "Item Price: " + this.price + "\n";
+        returnString += "Item Category: " + this.category + "\n";
+        returnString += "Item Is New?: " + this.isNew + "\n";
+
+        return returnString;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+
+        if (!(obj instanceof MenuItems)) {
+            return false;
+        }
+
+        MenuItems menuItems = (MenuItems) obj;
+        if (menuItems.name.equals(this.name)
+                && menuItems.description = (this.description)
+                && menuItems.price = (this.price)
+                && menuItems.category.equals(this.category))
+            return true;
+
+        else return false;
+
+    }
 }
